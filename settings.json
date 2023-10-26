@@ -1,0 +1,117 @@
+{
+  "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+      "source.fixAll": true
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
+  "editor.minimap.showSlider": "always",
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "none",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 160,
+  "editor.wrappingIndent": "same",
+  "files.trimTrailingWhitespace": true,
+  "scss.lint.unknownAtRules": "ignore",
+  "material-icon-theme.folders.color": "#053b7c",
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.saturation": 1,
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "material-icon-theme.folders.associations": {
+      "actions": "redux-actions",
+      "atoms": "react-components",
+      "base": "global",
+      "container": "",
+      "contract": "",
+      "Contracts": "",
+      "context": "redux-reducer",
+      "home": "",
+      "icon": "",
+      "interfaces": "typescript",
+      "mixins": "functions",
+      "modules": "animation",
+      "molecules": "contract",
+      "navigations": "routes",
+      "organisms": "container",
+      "portalGate": "delta",
+      "reducers": "redux-reducer",
+      ".storybook": "test",
+      "stencil": "stencil",
+      "store": "redux-store",
+      "selectors": "redux-selectors",
+      "templates": "layout",
+      "token": "",
+      "types": "less"
+  },
+  "markdownlint.config": {
+      "MD024": false,
+      "MD033": false
+  },
+  "stylelint.validate": ["css", "scss"],
+  "todo-tree.general.tags": [
+      "TODO",
+      "BUG",
+      "FIXME",
+      "ADDED"
+  ],
+  "todo-tree.highlights.customHighlight": {
+      "TODO": {
+          "icon": "check-circle",
+          "type": "tag",
+          "foreground": "#071522",
+          "background": "#ffa600",
+          "iconColour": "#ffa600",
+          "gutterIcon": true
+      },
+      "BUG": {
+          "icon": "bug",
+          "type": "tag",
+          "foreground": "#071522",
+          "background": "#0cff28",
+          "iconColour": "#0cff28",
+          "gutterIcon": true
+      },
+      "FIXME": {
+          "icon": "tools",
+          "type": "tag",
+          "foreground": "#071522",
+          "background": "#ff006f",
+          "iconColour": "#ff006f",
+          "gutterIcon": true
+      },
+      "ADDED": {
+          "icon": "diff-added",
+          "type": "tag",
+          "foreground": "#071522",
+          "background": "#0c9eff",
+          "iconColour": "#0c9eff",
+          "gutterIcon": true
+      }
+  },
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "workbench.activityBar.visible": true,
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.sideBar.location": "right",
+  "errorLens.excludeBySource": [
+      "css(unknownAtRules)"
+  ]
+}
