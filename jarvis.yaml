@@ -1,0 +1,25 @@
+accent:
+  left: "#0A5BC8"
+  right: "#E10B45"
+background: "#0f0f0f" # Terminal background color
+details: darker # Whether the theme is lighter or darker.
+foreground: "#668DD1" # The foreground color.
+terminal_colors: # Ansi escape colors.
+  bright:
+    black: "#666666"
+    blue: "#677EEF"
+    cyan: "#2EACFF"
+    green: "#FF459C"
+    magenta: "#EA47A7"
+    red: "#ba5aff"
+    white: "#f1f1f1"
+    yellow: "#657b83"
+  normal:
+    black: "#121212"
+    blue: "#3E5BEA"
+    cyan: "#0B85FF"
+    green: "#F90075"
+    magenta: "#CF1683"
+    red: "#1EA1FC"
+    white: "#E8E8E8"
+    yellow: "#FF42A3"
