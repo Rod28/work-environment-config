@@ -15,15 +15,16 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
 - Dentro del archivo de configuración **.vimrc** agregar las siguientes líneas de código.
 
     ``` zsh
-    syntax on
-    set expandtab
-    set tabstop=4
-    retab
-    set shiftwidth=4
-    set hlsearch
-    set paste
-    set ic
-    set number
+      syntax on
+      set expandtab
+      set tabstop=4
+      retab
+      set shiftwidth=4
+      set hlsearch
+      set paste
+      set ic
+      set number
+      color default
     ```
 
 &nbsp;
