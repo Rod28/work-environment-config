@@ -21,10 +21,7 @@ alias xcodeW='open -a "/Applications/Xcode.app" *.xcworkspace'
 alias xcodeP='open -a "/Applications/Xcode.app" *.xcodeproj'
 
 # Home brew
-export PATH="/opt/homebrew/bin:$PATH"
-
-# Docker
-export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+# export PATH="/opt/homebrew/bin:$PATH"
 
 #NVM
 export NVM_DIR="$HOME/.nvm"

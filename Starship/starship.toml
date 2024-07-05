@@ -44,7 +44,6 @@ truncate_to_repo = false
 truncation_symbol = '…/'
 home_symbol = ' ~'
 read_only_style = '197'
-read_only = ' 󰌾 '
 
 [cmd_duration]
 disabled = false

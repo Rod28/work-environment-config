@@ -2,15 +2,52 @@
 
 Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para trabajar.
 
+- ## VIM
+
+  Crea y edita el siguiente archivo en la raiz del equipo.
+
+    ``` zsh
+    vim ~/.vimrc
+    ```
+
+  &nbsp;
+
+- Dentro del archivo de configuración **.vimrc** agregar las siguientes líneas de código.
+
+    ``` zsh
+    syntax on
+    set expandtab
+    set tabstop=4
+    retab
+    set shiftwidth=4
+    set hlsearch
+    set paste
+    set ic
+    set number
+    color wombat
+    ```
+
+&nbsp;
+
+- ## OH MY ZSH
+
+  Para obtener la configuraón inicial de **Oh My Zsh**, entrar al enlace [Oh My Zsh](https://ohmyz.sh/). A partir de aqui, todas las configuraciones se harán en el archivo **.zshrc** que se genere al ejecutar el comando de instalación de Oh My Zsh.
+
+&nbsp;
+
+- ## Fuentes
+
+  Dentro de este repo se pueden obtener las fuetes que se usan para VS Code y para Warp, dentro de la carpeta [Fonts](./Fonts/). Si se quieren actualizar estas fuentes se puede hacer desde los enlaces de abajo.
+
+  > [FiraCode](https://github.com/tonsky/FiraCode)
+  >
+  > [MesloLGS NF](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts)
+
 &nbsp;
 
 - ## Warp
 
-  La terminar que utilizo es [Warp](https://docs.warp.dev/getting-started/readme) y toda su configuración esta hecha con [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation). La configuración de starship que utilizo esta en el archivo [starship.toml](./starship.toml).
-
-  > Para obtener la fuente que usa el tema de Warp descargar [MesloLGS NF](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts).
-  >
-  > Para obtener los iconos que se visualizan en la terminal consultar [iconos](https://starship.rs/presets/nerd-font).
+  La terminar que utilizo es [Warp](https://docs.warp.dev/getting-started/readme) y toda su configuración esta hecha con [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation), revisar instalación y configuración. La configuración de starship que utilizo en mi equipo esta en el archivo [starship.toml](./starship.toml).
 
 &nbsp;
 
@@ -125,9 +162,9 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
 
 &nbsp;
 
-- ## FiraCode para editor VS Code
+- ## VS Code
 
-  Entrar en la siguiente liga, [FiraCode](https://github.com/tonsky/FiraCode) y descargar el archivo **Fira_Code_v6.2.zip** (la versión del .zip puede variar), dentro del .zip, abrir la carpeta **ttf** e instalar cada una de las fuentes con doble click. La configuración de vs-code que utilizo esta en el archivo [settings.json](./settings.json).
+  Para obtener la configuración y todas las extensiones, basta con iniciar sesión con la cuenta de GitHub donde se hizo el respaldo desde la configuración de VS Code.
 
 &nbsp;
 
