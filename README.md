@@ -6,15 +6,15 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
 
   Crea y edita el siguiente archivo en la raiz del equipo.
 
-    ``` zsh
-    vim ~/.vimrc
+    ```zsh
+      vim ~/.vimrc
     ```
 
   &nbsp;
 
 - Dentro del archivo de configuración **.vimrc** agregar las siguientes líneas de código.
 
-    ``` zsh
+    ```zsh
       syntax on
       set expandtab
       set tabstop=4
