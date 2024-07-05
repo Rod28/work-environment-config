@@ -24,7 +24,6 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
     set paste
     set ic
     set number
-    color wombat
     ```
 
 &nbsp;
