@@ -6,7 +6,11 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
 
 - ## Warp
 
-  La yerminar que utilizo es [Warp](https://docs.warp.dev/getting-started/readme) y toda su configuración esta hecha con [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation). La configuración de starship que utilizo esta en el archivo [starship.toml](./starship.toml).
+  La terminar que utilizo es [Warp](https://docs.warp.dev/getting-started/readme) y toda su configuración esta hecha con [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation). La configuración de starship que utilizo esta en el archivo [starship.toml](./starship.toml).
+
+  > Para obtener la fuente que usa el tema de Warp descargar [MesloLGS NF](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts).
+  >
+  > Para obtener los iconos que se visualizan en la terminal consultar [iconos](https://starship.rs/presets/nerd-font).
 
 &nbsp;
 

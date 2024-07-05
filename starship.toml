@@ -42,9 +42,9 @@ format = 'at [$path]($style)[$read_only]($read_only_style) '
 truncation_length = 2
 truncate_to_repo = false
 truncation_symbol = '…/'
-home_symbol = '󰋜 ~'
+home_symbol = ' ~'
 read_only_style = '197'
-read_only = '  '
+read_only = ' 󰌾 '
 
 [cmd_duration]
 disabled = false
@@ -53,7 +53,7 @@ min_time = 10
 
 [git_branch]
 disabled = false
-symbol = ' '
+symbol = ' '
 format = 'on [$symbol$branch]($style) '
 truncation_symbol = '…/'
 style = 'bold green'
@@ -67,7 +67,7 @@ conflicted = '[=](bold yellow)[\($count\)](red) '
 deleted = '[✘](bold yellow)[\($count\)](red) '
 untracked = '[?](bold yellow)[\($count\)](red) '
 ahead = '[⇡](bold yellow)[\($count\)](red) '
-behind = '[](bold yellow)[\($count\)](red) '
+behind = '[⇣](bold yellow)[\($count\)](red) '
 stashed = '[$](bold yellow)[\($count\)](red) '
 modified = '[!](bold yellow)[\($count\)](red) '
 staged = '[+](bold yellow)[\($count\)](red) '
@@ -84,10 +84,6 @@ format = 'is [$symbol$version]($style) '
 [nodejs]
 disabled = false
 format = 'via [$symbol($version )]($style)'
-
-[kubernetes]
-disabled = false
-format = 'via [󱃾 $context\($namespace\)](bold purple) '
 
 [battery]
 disabled = true
