@@ -2,19 +2,47 @@
 
 Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para trabajar.
 
-- ## VIM
+&nbsp;
 
-  Crea y edita el siguiente archivo en la raiz del equipo.
+- ## Fuentes
+
+  Dentro de este repo se pueden obtener las [fuetes](./Fonts) que se usan para VS Code y para Warp. Si se quieren actualizar estas fuentes, se puede hacer desde los enlaces de abajo.
+
+  > [FiraCode](https://github.com/tonsky/FiraCode)
+  >
+  > [MesloLGS NF](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts)
+
+&nbsp;
+
+- ## Terminal Warp
+
+  La terminar que utilizo es [Warp](https://docs.warp.dev/getting-started/getting-started-with-warp) y toda su configuración esta hecha con **Starship**. Más adelante vamos a configurarlo. Para seleccionar la fuente recien descargada **MesloLGS NF**, abrir la configuración de **Warp** con ```Command + ,``` y en el apartado de **Appearance**, buscar **Terminal font** y seleccionar **MesloLGS NF**.
+
+  Para generar un tema personalizado para **Warp**, copiar el contenido del archivo [jarvis.yaml](./Warp/jarvis.yaml) y generar un archivo de configuración con el siguiente comando:
 
     ```zsh
-      vim ~/.vimrc
+      # Generar la carpeta themes
+      mkdir -p ~/.warp/themes/
+
+      # Generar el archivo para el nuevo tema
+      vim ~/.warp/themes/my-custom-theme.yaml
     ```
 
-  &nbsp;
+    > Revisar [temas personalizados](https://docs.warp.dev/appearance/custom-themes) de **Starship**.
 
-- Dentro del archivo de configuración **.vimrc** agregar las siguientes líneas de código.
+    Para utilizar el tema recien creado, abrir la configuración de **Warp** con ```Command + ,``` y en el apartado de **Appearance**, buscar **Themes**, el nombre del archivo yaml que se generó, será el nombre del tema a utilizar.
+
+&nbsp;
+
+- ## VIM
+
+  Crear y editar el archivo **.vimrc** en la raiz del equipo y agregar las siguientes líneas de código.
 
     ```zsh
+      # Generar el archivo de configuración .vimrc
+      vim ~/.vimrc
+
+      # Copiar dentro del archivo recien creado
       syntax on
       set expandtab
       set tabstop=4
@@ -31,50 +59,88 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
 
 - ## OH MY ZSH
 
-  Para obtener la configuraón inicial de **Oh My Zsh**, entrar al enlace [Oh My Zsh](https://ohmyz.sh/). A partir de aqui, todas las configuraciones se harán en el archivo **.zshrc** que se genere al ejecutar el comando de instalación de Oh My Zsh.
+  Para obtener la configuración inicial de la shell, entrar al enlace [Oh My Zsh](https://ohmyz.sh/) y correr el comando que viene al final del sitio. A partir de aqui, todas las configuraciones se harán en el archivo **.zshrc** que se genere al ejecutar el comando de instalación de **Oh My Zsh**.
 
-&nbsp;
+  Entrar en el archivo de configuración **.zshrc** que está en la raíz del equipo para hacer cualquier edición en la shell de zsh.
 
-- ## Fuentes
+    ```zsh
+      vim ~/.zshrc
 
-  Dentro de este repo se pueden obtener las fuetes que se usan para VS Code y para Warp, dentro de la carpeta [Fonts](./Fonts/). Si se quieren actualizar estas fuentes se puede hacer desde los enlaces de abajo.
+      # Imprime en consola la shell que está en uso
+      echo $SHELL
+    ```
 
-  > [FiraCode](https://github.com/tonsky/FiraCode)
-  >
-  > [MesloLGS NF](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts)
+  Dentro del archivo de configuración **.zshrc**, asignar un string vacío a la variable
+  **ZSH_THEME**. Esto es así debido a que se va a generar un tema con **Starship** más adelante.
 
-&nbsp;
+  Para agregar un autocompletado para **Oh My Zsh**, ir al siguiente [enlace](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md). Una vez instalado, agregarlo dentro de la variable **plugins** dentro del archivo de configuración **zshrc**.
 
-- ## Warp
+    ```zsh
+      plugins=(
+        # other plugins...
+        zsh-autosuggestions
+      )
+    ```
 
-  La terminar que utilizo es [Warp](https://docs.warp.dev/getting-started/readme) y toda su configuración esta hecha con [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation), revisar instalación y configuración. La configuración de starship que utilizo en mi equipo esta en el archivo [starship.toml](./starship.toml).
+  Agrega los siguientes [alias](./zshconfig.sh) en el mismo archivo de configuración **.zshrc**.
 
 &nbsp;
 
 - ## Homebrew
 
-  Para instalar [Homebrew](https://brew.sh/) es necesario correr el siguiente comando del sitio de homebrew, y exportar el path del mismo, ya que homebrew si instala en la shell de bash y no con zsh.
+  Para instalar [Homebrew](https://brew.sh/) es necesario correr el siguiente comando del sitio oficial de **homebrew** y exportar el path del mismo dentro del archivo de configuración **.zshrc**, ya que homebrew se instala en la shell de **bash** y no en la de **zsh**.
 
     ```zsh
       # Home brew
       export PATH="/opt/homebrew/bin:$PATH"
 
-      # Correr desde la terminal para saber si Homebrew esta listo para usarse
+      # Revisar que se ha instalado correctamente
+      brew --version
+
+      # Revisar si Homebrew esta listo para usarse
       brew doctor
+    ```
+
+&nbsp;
+
+- ## Starship
+
+  [Starship](https://starship.rs/) va a permitir configurar los iconos y el prompt de la shell de zsh. Sigue la guía para su instalación, ya que al momento de hacer esta guía, **Starship** indica que se debe de agregar una línea en el archivo de configuración **.zshrc**. Instalar preferentemente con brew.
+
+    ```zsh
+      # Instalar
+      brew install starship
+
+      # Revisar que se ha instalado correctamente
+      starship --version
+    ```
+
+  La configuración de **Starship** que utilizo, está dentro del archivo [starship.toml](./Starship/starship.toml) para que se copie y pegue una vez que el archivo de configuración
+  exista. Generar este archivo como lo indica este enlace de [configuración](https://starship.rs/config/) de **Starship**.
+
+&nbsp;
+
+- ## Nvm
+
+  [Nvm](https://github.com/nvm-sh/nvm) se utiliza para gestionar más de una versión de Node.Js.
+
+    ```zsh
+      # Revisar que se ha instalado correctamente
+      nvm --version
     ```
 
 &nbsp;
 
 - ## Neofetch
 
-  [Neofetch con Homebrew](https://formulae.brew.sh/formula/neofetch#default) muestra estadisticas del equipo. Para ejecutarlo en el momento de abrir la terminal, se debe agregar la siguiente linea al final del archivo **.zshrc**.
+  [Neofetch con Homebrew](https://formulae.brew.sh/formula/neofetch#default) muestra estadisticas del equipo. Para ejecutarlo en el momento de abrir la terminal, se debe agregar la siguiente línea al final del archivo de configuración **.zshrc**.
 
     ```zsh
       # Muestra estadisticas al ejecutar la terminal por primera vez
       neofetch
     ```
 
-  Dentro del archivo de configuración **~/.config/neofetch/config.conf**, reemplazar todo el código que está arriba de "# Title" por lo siguiente.
+  Dentro del archivo de configuración **~/.config/neofetch/config.conf**, reemplazar todo el código que está arriba de apartado **"# Title"** por lo siguiente.
 
     ```zsh
       print_info() {
@@ -132,39 +198,19 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
 
 &nbsp;
 
-- ## Alias
-
-  La siguiente lista de alias, se debe agregar dentro del archivo de configuración **.zshrc**
-
-    ```zsh
-      # Alias
-      # --------- ZSH
-      alias zshconfig="vim ~/.zshrc"
-      alias zshsource="source ~/.zshrc"
-      alias zshupdate="omz update"
-      # --------- VIM
-      alias vimconfig="vim ~/.vimrc"
-      # --------- NEOFETCH
-      alias neoconfig="vim ~/.config/neofetch/config.conf"
-      # --------- SSH
-      alias sshpub="cat ~/.ssh/id_rsa.pub"
-      # --------- SASS
-      alias sasscompiler="sass --watch sass:css"
-      # --------- NODE
-      alias nodeclear="rm -rf node_modules"
-      # --------- NPM
-      alias npmroot="npm root -g"
-      alias gitConfig="git config --list"
-      # --------- XCODE
-      alias xcodeW='open -a "/Applications/Xcode.app" *.xcworkspace'
-      alias xcodeP='open -a "/Applications/Xcode.app" *.xcodeproj'
-    ```
-
-&nbsp;
-
 - ## VS Code
 
-  Para obtener la configuración y todas las extensiones, basta con iniciar sesión con la cuenta de GitHub donde se hizo el respaldo desde la configuración de VS Code.
+  Descarga [Visual Studio Code](https://code.visualstudio.com/docs/?dv=osx) y ejecuta el siguiente comando desde **VS Code** para exportar el path que permita abrirlo desde cualquier terminal.
+
+    ```zsh
+      Command + Shift + P
+
+      # Escribe shell y seleccionar la opcion que diga:
+      # Shell Command: Install 'code' command in PATH
+    ```
+
+  Para obtener todas las extensiones y configuración de **VS Code**, basta con iniciar sesión con la cuenta de **GitHub** donde se hizo el respaldo desde la configuración.
+  Lo mismo aplica para generar un respaldo.
 
 &nbsp;
 
