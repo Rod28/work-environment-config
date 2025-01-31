@@ -73,15 +73,6 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
   Dentro del archivo de configuración **.zshrc**, asignar un string vacío a la variable
   **ZSH_THEME**. Esto es así debido a que se va a generar un tema con **Starship** más adelante.
 
-  Para agregar un autocompletado para **Oh My Zsh**, ir al siguiente [enlace](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md). Una vez instalado, agregarlo dentro de la variable **plugins** dentro del archivo de configuración **zshrc**.
-
-    ```zsh
-      plugins=(
-        # other plugins...
-        zsh-autosuggestions
-      )
-    ```
-
   Agrega los siguientes [alias](./zshconfig.sh) en el mismo archivo de configuración **.zshrc**.
 
 &nbsp;
