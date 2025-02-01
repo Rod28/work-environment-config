@@ -28,7 +28,7 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
       vim ~/.warp/themes/my-custom-theme.yaml
     ```
 
-    > Revisar [temas personalizados](https://docs.warp.dev/appearance/custom-themes) de **Starship**.
+    > Revisar [temas personalizados](https://docs.warp.dev/appearance/custom-themes) con **Warp**.
 
     Para utilizar el tema recien creado, abrir la configuración de **Warp** con ```Command + ,``` y en el apartado de **Appearance**, buscar **Themes**, el nombre del archivo yaml que se generó, será el nombre del tema a utilizar.
 
@@ -157,8 +157,17 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
 
 &nbsp;
 
+- ## SSH
+
+  Para generar una nueva llave **ssh**, ejecuta el siguiente comando. Consulta el [enlace](https://man.openbsd.org/ssh-keygen.1) para revisar los parámetros que admite el comando.
+
+    ```zsh
+      # Genera una nueva llave ssh
+      ssh-keygen
+    ```
+
+&nbsp;
+
 - ## Sintaxis de Markdown
 
-  Para leer más sobre la sintaxis de como escribr markdown, consultar el siguiente link.
-
-  [Uso de Markdown](https://markdown.es/sintaxis-markdown/).
+  Para leer más sobre la sintaxis de como utilizar **Markdown**, consulta el enlace [uso de Markdown](https://markdown.es/sintaxis-markdown/).
