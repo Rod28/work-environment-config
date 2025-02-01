@@ -73,6 +73,15 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
   Dentro del archivo de configuración **.zshrc**, asignar un string vacío a la variable
   **ZSH_THEME**. Esto es así debido a que se va a generar un tema con **Starship** más adelante.
 
+  Para hacer que los comandos de exito y error resalten en otro color en **Oh My Zsh**, ir al siguiente [enlace](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md). Una vez instalado, agregarlo dentro de la variable **plugins** del archivo de configuración **.zshrc**.
+
+    ```zsh
+      plugins=(
+        # other plugins...
+        zsh-syntax-highlighting
+      )
+    ```
+
   Agrega los siguientes [alias](./zshconfig.sh) en el mismo archivo de configuración **.zshrc**.
 
 &nbsp;
@@ -96,12 +105,9 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
 
 - ## Starship
 
-  [Starship](https://starship.rs/) va a permitir configurar los iconos y el prompt de la shell de zsh. Sigue la guía para su instalación, ya que al momento de hacer esta guía, **Starship** indica que se debe de agregar una línea en el archivo de configuración **.zshrc**. Instalar preferentemente con brew.
+  [Starship](https://starship.rs/) va a permitir configurar los iconos y el prompt de la shell de zsh. Sigue la guía para su instalación, ya que al momento de hacer esta guía, **Starship** indica que se debe de agregar una línea en el archivo de configuración **.zshrc**. Instalar preferentemente con [brew](https://formulae.brew.sh/formula/starship#default).
 
     ```zsh
-      # Instalar
-      brew install starship
-
       # Revisar que se ha instalado correctamente
       starship --version
     ```
@@ -127,65 +133,11 @@ Esta configuración esta basada en mi entorno de trabajo MAC que utilizo para tr
   [Neofetch con Homebrew](https://formulae.brew.sh/formula/neofetch#default) muestra estadisticas del equipo. Para ejecutarlo en el momento de abrir la terminal, se debe agregar la siguiente línea al final del archivo de configuración **.zshrc**.
 
     ```zsh
-      # Muestra estadisticas al ejecutar la terminal por primera vez
+      # Muestra estadisticas al ejecutar en la terminal
       neofetch
     ```
 
-  Dentro del archivo de configuración **~/.config/neofetch/config.conf**, reemplazar todo el código que está arriba de apartado **"# Title"** por lo siguiente.
-
-    ```zsh
-      print_info() {
-          info title
-
-          info dividerPersonal
-          info "GitHub" gitHub
-          info "Correo" correo
-
-          info dividerSystem
-          info "OS" distro
-          info "Host" model
-          info "Packages" packages
-          info "Shell" shell
-          info "Terminal" term
-          info "Terminal Font" term_font
-
-          info dividerHardware
-          info "Resolution" resolution
-          info "CPU" cpu
-          info "CPU Usage" cpu_usage
-          info "GPU" gpu
-          info "Memory" memory
-
-          # info "Kernel" kernel
-          # info "Uptime" uptime
-          # info "GPU Driver" gpu_driver  # Linux/macOS only
-          # info "CPU Usage" cpu_usage
-          # info "Disk" disk
-          # info "Battery" battery
-          # info "Font" font
-          # info "Song" song
-          # [[ "$player" ]] && prin "Music Player" "$player"
-          # info "Local IP" local_ip
-          # info "Public IP" public_ip
-          # info "Users" users
-          # info "Locale" locale  # This only works on glibc systems.
-
-          info cols
-      }
-
-      # ------------ Custom info ------------
-      # Dividers
-      dividerPersonal="****************** INFORMACION ******************"
-      dividerSystem="********************* SYSTEM ********************"
-      dividerHardware="******************** HARDWARE *******************"
-
-      # Datas
-      gitHub="https://github.com/Rod28"
-      correo="r.garez28@gmail.com"
-
-
-      # Title
-    ```
+  Dentro del archivo de configuración que se genera en la siguiente ruta **~/.config/neofetch/config.conf**, reemplazar todo el código que está arriba de apartado **"# Title"** por el contenido del archivo [config.conf](./Neofetch/config.conf).
 
 &nbsp;
 

@@ -7,17 +7,13 @@ $nodejs\
 $cmd_duration"""
 
 # A minimal left prompt
-format = """
-$os\
-$username\
-$directory\
-$git_branch\
-$git_state\
-$git_status"""
+format = '''
+$os$username$directory$git_branch$git_state$git_status
+[└─>](bold blue) '''
 
 # Wait 10 milliseconds for starship to check files under the current directory.
 scan_timeout = 10
-command_timeout = 1000
+command_timeout = 6000
 
 # Disable the blank line at the start of the prompt
 add_newline = false
@@ -32,8 +28,8 @@ Macos = ''
 [username]
 disabled = false
 format = '[$user]($style) '
-style_user = 'blue bold'
-style_root = 'black bold'
+style_user = 'bold blue'
+style_root = 'bold black'
 show_always = true
 
 [directory]
@@ -41,8 +37,9 @@ disabled = false
 format = 'at [$path]($style)[$read_only]($read_only_style) '
 truncation_length = 2
 truncate_to_repo = false
-truncation_symbol = '…/'
+truncation_symbol = '../'
 home_symbol = ' ~'
+style = 'bold cyan'
 read_only_style = '197'
 
 [cmd_duration]
@@ -54,8 +51,8 @@ min_time = 10
 disabled = false
 symbol = ' '
 format = 'on [$symbol$branch]($style) '
-truncation_symbol = '…/'
-style = 'bold green'
+truncation_symbol = '../'
+style = 'bold yellow'
 
 [git_status]
 disabled = false
