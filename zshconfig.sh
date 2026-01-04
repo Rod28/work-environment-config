@@ -25,3 +25,6 @@ alias gitconfig="git config --list"
 # --------- XCODE
 alias xcodeW='open -a "/Applications/Xcode.app" *.xcworkspace'
 alias xcodeP='open -a "/Applications/Xcode.app" *.xcodeproj'
+
+# Development
+export NODE_ENV="local"
